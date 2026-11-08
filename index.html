@@ -278,7 +278,7 @@ footer .salam{color:#b5566f!important}
  if("scrollRestoration" in history)history.scrollRestoration="manual";scrollTo(0,0);
  var q=new URLSearchParams(location.search),to=(q.get("to")||q.get("nama")||"").trim().slice(0,60);if(to)document.getElementById("gn").textContent=to.replace(/\b\p{L}/gu,function(c){return c.toUpperCase()});
  /* musik: isi MUSIC_URL dengan file mp3 sendiri bila ada. Kosong = melodi kecapi buatan */
- var MUSIC_URL="./asset/Last Night on Earth - Green Day.mp3",aud=MUSIC_URL?new Audio(MUSIC_URL):null,AC,mg,tm,nt,st=0,on=false;if(aud)aud.loop=true;
+ var MUSIC_URL="./asset/Nadin Amizah - Kekal.mp3",aud=MUSIC_URL?new Audio(MUSIC_URL):null,AC,mg,tm,nt,st=0,on=false;if(aud)aud.loop=true;
  var ph=[0,2,4,2,3,2,1,2,4,5,4,2,3,1,2,0,2,4,5,7,5,4,2,4,3,2,1,2,0,-1,0,-5];
  function fq(d){return 220*Math.pow(2,d/5)}
  function pl(t,f,v){var o=AC.createOscillator(),o2=AC.createOscillator(),g=AC.createGain(),l=AC.createBiquadFilter();o.type="triangle";o2.type="sine";o.frequency.value=f;o2.frequency.value=f*2;l.type="lowpass";l.frequency.setValueAtTime(3200,t);l.frequency.exponentialRampToValueAtTime(500,t+1.2);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.012);g.gain.exponentialRampToValueAtTime(.0005,t+2.4);o.connect(l);o2.connect(l);l.connect(g);g.connect(mg);o.start(t);o2.start(t);o.stop(t+2.5);o2.stop(t+2.5)}
