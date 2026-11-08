@@ -290,7 +290,7 @@ footer .salam{color:#b5566f!important}
  var mb=document.getElementById("mus"),cv=document.getElementById("cover");document.body.style.overflow="hidden";
  document.getElementById("openBtn").onclick=function(){cv.classList.add("open");document.body.style.overflow="";scrollTo({top:0,behavior:"instant"});mb.classList.add("on");try{play()}catch(e){}setTimeout(function(){cv.style.visibility="hidden"},1300)};
  mb.onclick=function(){if(on){stop();mb.classList.add("mute")}else{play();mb.classList.remove("mute")}};
- var T=new Date("2026-12-20T08:00:00+07:00").getTime(),cs=$(".count");
+ var T=new Date("2026-11-27T08:00:00+07:00").getTime(),cs=$(".count");
  function tick(){var s=Math.floor(Math.max(0,T-Date.now())/1000),v=[Math.floor(s/86400),Math.floor(s%86400/3600),Math.floor(s%3600/60),s%60],l=["Hari","Jam","Menit","Detik"];
   var h=v.map(function(n,i){return"<div><b>"+n+"</b><small>"+l[i]+"</small></div>"}).join("");cs.forEach(function(c){c.innerHTML=h})}
  tick();setInterval(tick,1000);
